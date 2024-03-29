@@ -17,6 +17,9 @@ jobs:
       with:
         repository: lemniskett/AnyKernel3
         path: zipper
+        
+    - name: Install liblz4-tool
+      run: sudo apt-get install -y liblz4-tool
 
     - name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
@@ -25,6 +28,7 @@ jobs:
         NAME: Dark-Ages-Último
       with:
         arch: arm64
+        # compiler: gcc/10
         compiler: aosp-clang/master/clang-r498229b
         defconfig: m1s1_defconfig
         image: Image.gz-dtb
