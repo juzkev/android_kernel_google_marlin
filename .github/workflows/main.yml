@@ -25,13 +25,13 @@ jobs:
       uses: juzkev/android-kernel-actions@master
       id: build
       env:
-        NAME: Dark-Ages-Último
+        NAME: LineageOS-kernel
       with:
         arch: arm64
         # compiler: gcc/10
         compiler: aosp-clang/master/clang-r498229b
         defconfig: m1s1_defconfig
-        image: Image.gz-dtb
+        image: Image.lz4-dtb
 
     - name: Release build
       uses: ncipollo/release-action@v1
