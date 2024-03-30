@@ -25,7 +25,7 @@ jobs:
       uses: juzkev/android-kernel-actions@master
       id: build
       env:
-        NAME: LineageOS-kernel
+        NAME: android_kernel_google_marlin
       with:
         arch: arm64
         # compiler: gcc/10
