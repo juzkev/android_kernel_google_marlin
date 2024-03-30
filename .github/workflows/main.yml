@@ -46,4 +46,4 @@ jobs:
         to: ${{ secrets.CHANNEL_ID }}
         token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         message: ${{ github.repository }} on ${{ github.sha }} is built!
-        document: ${{ steps.<step id>.outputs.outfile }}
+        document: ${{ steps.build.outputs.outfile }}
